@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SchedulerEvent } from '@progress/kendo-angular-scheduler';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'daily-weekly-monthly-scheduler';
+  events: Event[] = [];
+      onNewEvent(event: Event) {
+        this.events = this.events.concat(event);
+      }
+      
 }

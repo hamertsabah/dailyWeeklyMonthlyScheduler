@@ -1,0 +1,27 @@
+<form (submit)="handleSubmit()" [formGroup]="eventForm">
+    <div class="input-holder">
+      <input type="text" placeholder="Planın başlığını giriniz" formControlName="title" />
+    </div>
+    <div class="input-holder">
+      <kendo-datepicker
+        formControlName="start"
+        placeholder="Başlangıç"
+      ></kendo-datepicker>
+    </div>
+    <div class="input-holder">
+      <kendo-datepicker
+        formControlName="end"
+        placeholder="Bitiş"
+      ></kendo-datepicker>
+    </div>
+    <div class="input-holder">
+      <textarea
+        placeholder="Açıklama"
+        rows="4"
+        formControlName="description"
+      ></textarea>
+    </div>
+    <div class="input-holder">
+      <button type="submit">Planla</button>
+    </div>
+  </form> 
